@@ -40,6 +40,7 @@ function collectCarriers(orders: ReturnType<typeof useOrders>["orders"]): string
 /** Order tracking dashboard with live-polling status timelines. */
 export default function TrackingPage() {
   const locale = useLocale();
+  const t = useTranslations("tracking");
   const [paused, setPaused] = useState(false);
   const [selectedCarriers, setSelectedCarriers] = useState<Set<string>>(
     new Set()
